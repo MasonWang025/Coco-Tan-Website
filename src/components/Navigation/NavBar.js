@@ -63,7 +63,7 @@ export default function NavBar() {
             <NavBarItem title="About Coco" active={path === "/about"} to="/about" />
             <NavBarItem title="Contact" active={path === "/contact"} to="/contact" />
           </div>
-          <BlobButton color="primary mt-2 mt-md-0 mb-2 mb-md-0" textColor="white">
+          <BlobButton color="primary my-2 my-lg-0" textColor="white">
             <div>CocoTanGroup@gmail.com</div>
           </BlobButton>
         </div>
