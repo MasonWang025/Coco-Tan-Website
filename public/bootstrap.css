@@ -9920,7 +9920,7 @@ a.text-danger:focus {
   color: #a95400 !important;
 }
 .text-light {
-  color: #f8f9fa !important;
+  color: #f8f9fa;
 }
 a.text-light:hover,
 a.text-light:focus {
@@ -10047,7 +10047,7 @@ a.text-dark:focus {
   }
 }
 .bg-dark {
-  background-color: #000 !important;
+  background-color: #222 !important;
 }
 .bg-light {
   background-color: #fff !important;

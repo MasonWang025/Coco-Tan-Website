@@ -22,7 +22,7 @@ export default function NavBar() {
   });
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div className="container">
         {/* Logo */}
         <Link to="/">
@@ -58,7 +58,7 @@ export default function NavBar() {
             <NavBarItem title="Home" active={path === "/"} to="/" />
             <NavBarItem
               title="Listings"
-              active={path === "/listings"}
+              active={path.startsWith("/listings")}
               to="/listings"
             />
             <NavBarItem

@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import NavBar from "./components/Navigation/NavBar";
 
+import Home from "./components/Home/Home";
+
 import "./assets/style.css";
 
 export default function App() {
@@ -17,7 +19,7 @@ export default function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
-            Home.
+            <Home />
           </Route>
           <Route path="/listings">Listings</Route>
           <Route path="/about">About Coco</Route>
