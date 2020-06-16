@@ -10,7 +10,7 @@ export default function NavBar() {
 
   useEffect(() => {
     // clicking outside the navbar closes it
-    $(document).ready(function () {
+    $(document).ready(() => {
       $(document).click(function (event) {
         var click = $(event.target);
         var _open = $(".navbar-collapse").hasClass("show");
@@ -53,15 +53,24 @@ export default function NavBar() {
         </button>
 
         {/* Navigation links */}
-        <div
-          className="collapse navbar-collapse"
-          id="navbarColor01"
-        >
+        <div className="collapse navbar-collapse" id="navbarColor01">
           <div className="navbar-nav ml-auto">
             <NavBarItem title="Home" active={path === "/"} to="/" />
-            <NavBarItem title="Listings" active={path === "/listings"} to="/listings" />
-            <NavBarItem title="About Coco" active={path === "/about"} to="/about" />
-            <NavBarItem title="Contact" active={path === "/contact"} to="/contact" />
+            <NavBarItem
+              title="Listings"
+              active={path === "/listings"}
+              to="/listings"
+            />
+            <NavBarItem
+              title="About Coco"
+              active={path === "/about"}
+              to="/about"
+            />
+            <NavBarItem
+              title="Contact"
+              active={path === "/contact"}
+              to="/contact"
+            />
           </div>
           <BlobButton color="primary my-2 my-lg-0" textColor="white">
             <div>CocoTanGroup@gmail.com</div>
