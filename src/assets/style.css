@@ -204,6 +204,7 @@ Hero section
 }
 
 .btn-get-started:hover {
+  color: white;
   border-color: var(--primary);
   background: var(--primary);
 }
