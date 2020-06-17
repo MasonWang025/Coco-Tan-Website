@@ -73,7 +73,7 @@ export default function NavBar() {
             />
           </div>
           <Link to="/contact" className="text-white">
-            <BlobButton color="primary my-2 my-lg-0" textColor="white">
+            <BlobButton color="primary mt-2 mb-3 my-lg-0" textColor="white">
               <div>CocoTanGroup@gmail.com</div>
             </BlobButton>
           </Link>

@@ -130,7 +130,7 @@ export default function ContactForm() {
             <a
               href={`mailto:CocoTanGroup@gmail.com?&subject=${escape(
                 values.subject
-              )}&body=${escape(values.message)}%0A${escape(values.name)}`}
+              )}&body=${escape(values.message)}`}
               id="submit"
               className="btn-get-started main-action text-decoration-none"
               target="_blank"
