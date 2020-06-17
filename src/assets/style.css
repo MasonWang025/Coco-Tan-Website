@@ -127,12 +127,15 @@ Hero section
   background: url("img/bg-hero-mobile.png") center center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
   #hero {
     background: url("img/hero-bg.jpg") center center;
+    min-height: 100vh;
+    height: 100%;
   }
 }
 
@@ -168,7 +171,7 @@ Hero section
 }
 
 /* call to action buttons */
-#hero .btn-get-started {
+.btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1.2em;
@@ -182,23 +185,23 @@ Hero section
   box-shadow: -1px 2px 5px var(--title);
 }
 
-#hero .btn-get-started:hover {
+.btn-get-started:hover {
   border-color: var(--primary);
   background: var(--primary);
 }
 
-#hero .main-action:hover {
+.main-action:hover {
   border-color: var(--bright);
   background: var(--bright);
 }
 
-#hero .main-action {
+.main-action {
   text-transform: uppercase;
   background-color: var(--primary);
   border-color: var(--primary);
 }
 
-#hero .main-action:hover {
+.main-action:hover {
   background-color: var(--bright);
   border-color: var(--bright);
 }
@@ -206,7 +209,7 @@ Hero section
 /* Contact Section */
 /* contact form */
 .contact-container {
-  padding-top: 100px;
+  padding-top: 95px;
 }
 
 .cool-b4-form .btn {
@@ -226,7 +229,7 @@ Hero section
 
 .cool-b4-form .form-group {
   position: relative;
-  padding-top: 20px;
+  padding-top: 1.5em;
   margin-bottom: 0;
   /* If there's only 1 input make it full height */
 }
@@ -234,7 +237,7 @@ Hero section
   height: 100%;
 }
 .cool-b4-form .form-group:first-child:last-child .form-control {
-  min-height: 9em;
+  min-height: 5em;
   height: 100%;
 }
 .cool-b4-form .form-group textarea {
@@ -254,11 +257,12 @@ Hero section
 .cool-b4-form .form-group label {
   position: absolute;
   left: 10px;
-  top: 25px;
+  top: 2em;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .cool-b4-form .form-group .form-control {
+  font-size: 1.2em;
   border-radius: 4px;
   border-width: 0 0 2px 0;
 }
@@ -274,8 +278,8 @@ Hero section
 }
 .cool-b4-form .form-group .form-control:focus ~ label,
 .cool-b4-form .form-group .form-control.hasValue ~ label {
-  -webkit-transform: scale(0.7);
-  transform: scale(0.7);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
   top: 0;
   left: 0;
 }
@@ -284,15 +288,35 @@ Hero section
   background: url("img/bg-hero-mobile.png") center center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
   .hero-bg {
     background: url("img/hero-bg.jpg") center center;
+    height: 100%;
   }
 }
 
 form #submit:hover {
   color: white;
+}
+
+#submit {
+  font-size: 1.2em;
+  min-width: 20vw;
+}
+
+.contactinfo p a {
+  color: var(--dark);
+}
+
+.contactinfo p b {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.contactinfo p a:hover {
+  text-decoration: none;
 }

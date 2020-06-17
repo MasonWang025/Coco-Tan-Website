@@ -72,11 +72,11 @@ export default function NavBar() {
               to="/contact"
             />
           </div>
-          <BlobButton color="primary my-2 my-lg-0" textColor="white">
-            <Link to="/contact" className="text-white">
+          <Link to="/contact" className="text-white">
+            <BlobButton color="primary my-2 my-lg-0" textColor="white">
               <div>CocoTanGroup@gmail.com</div>
-            </Link>
-          </BlobButton>
+            </BlobButton>
+          </Link>
         </div>
       </div>
     </nav>
