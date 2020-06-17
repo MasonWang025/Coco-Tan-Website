@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import $ from "jquery";
 
 import useForm from "../Other/useForm";
+import SectionHeader from "../Other/SectionHeader";
 
 export default function ContactForm() {
   useEffect(() => {
@@ -31,7 +32,9 @@ export default function ContactForm() {
           className="cool-b4-form"
           onSubmit={(e) => e.preventDefault()}
         >
-          <h2 className="text-center pt-4">Contact Coco</h2>
+          <SectionHeader center={true}>
+            Contact Coco
+          </SectionHeader>
           <div className="row contactinfo text-center justify-content-center">
             <div className="col-fit mr-0 mr-md-3">
               <p className="lead mb-0">
