@@ -32,9 +32,7 @@ export default function ContactForm() {
           className="cool-b4-form"
           onSubmit={(e) => e.preventDefault()}
         >
-          <SectionHeader center={true}>
-            Contact Coco
-          </SectionHeader>
+          <SectionHeader center={true}>Contact Coco</SectionHeader>
           <div className="row contactinfo text-center justify-content-center">
             <div className="col-fit mr-0 mr-md-3">
               <p className="lead mb-0">
@@ -132,7 +130,7 @@ export default function ContactForm() {
             <a
               href={`mailto:CocoTanGroup@gmail.com?&subject=${escape(
                 values.subject
-              )}&body=${escape(values.message)}`}
+              )}&body=${escape(values.message)}%0A${escape(values.name)}`}
               id="submit"
               className="btn-get-started main-action text-decoration-none"
               target="_blank"
