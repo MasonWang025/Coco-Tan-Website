@@ -8,13 +8,17 @@
 
 body {
   --btn-color: var(--primary);
-  --btn-text-color: white;
+  --btn-text-color: var(--primary);
   --background-color: transparent;
   --button-padding: 0.6em;
 }
 
 .blob-btn.text-white {
   --btn-text-color: white;
+}
+
+.blob-btn.text-primary {
+  --btn-text-color: var(--primary);
 }
 
 .blob-btn.color-primary {
@@ -65,7 +69,14 @@ body {
   transition: all 0.5s 0.2s;
   border-radius: 30px;
 }
-.blob-btn:hover {
+
+.blob-btn > * {
+  -webkit-transition: all 0.5s 0.2s;
+  transition: all 0.3s 0.1s;
+}
+
+.blob-btn:hover,
+.blob-btn:hover > * {
   color: #ffffff;
   border-radius: 30px;
 }
@@ -104,10 +115,10 @@ body {
   border-radius: 100%;
   -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
   transform: translate3d(0, 150%, 0) scale(1.7);
-  -webkit-transition: -webkit-transform 0.420s;
-  transition: -webkit-transform 0.420s;
-  transition: transform 0.420s;
-  transition: transform 0.420s, -webkit-transform 0.420s;
+  -webkit-transition: -webkit-transform 0.42s;
+  transition: -webkit-transform 0.42s;
+  transition: transform 0.42s;
+  transition: transform 0.42s, -webkit-transform 0.42s;
 }
 @supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
   .blob-btn__blob {
@@ -155,4 +166,5 @@ body {
 .blob-btn__inner:hover,
 .blob-btn__inner:focus {
   outline: none;
+  color: white;
 }

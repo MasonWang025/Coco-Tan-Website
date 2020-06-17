@@ -9,6 +9,7 @@ import {
 import NavBar from "./components/Navigation/NavBar";
 
 import Home from "./components/Home/Home";
+import Contact from "./components/Contact/Contact";
 
 import "./assets/style.css";
 
@@ -23,7 +24,9 @@ export default function App() {
           </Route>
           <Route path="/listings">Listings</Route>
           <Route path="/about">About Coco</Route>
-          <Route path="/contact">Contact Coco</Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
           <Redirect to="/" />
         </Switch>
       </Router>

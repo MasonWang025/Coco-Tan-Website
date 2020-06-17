@@ -37,7 +37,10 @@ export default function Hero() {
         <h2 className="more d-md-block d-none text-light">
           <b>Top 50 Realtor</b>
           <sup>&reg;</sup> Nationwide{" "}
-          <small> As Rated by the Wall Street Journal</small>
+          <small>
+            {" "}
+            <i>As Rated by the Wall Street Journal</i>
+          </small>
           <br />
           <b>Top 1% Producer</b> for 17 Consecutive Years
         </h2>
