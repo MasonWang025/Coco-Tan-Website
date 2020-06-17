@@ -25,7 +25,7 @@ export default function ContactForm() {
   });
 
   return (
-    <div className="contact-container container">
+    <div className="contact-container container pb-3">
       <div className="contact-wrap card card-body border-0 shadow mt-0 mt-md-5">
         <form
           autoComplete="off"

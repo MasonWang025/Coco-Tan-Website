@@ -15,7 +15,7 @@ export default function Hero() {
             options={{
               loop: false,
               lifeLike: false,
-              speed: 60,
+              speed: 69,
               html: true,
               cursor: false,
             }}
@@ -24,7 +24,7 @@ export default function Hero() {
                 .type(
                   "<span class='text-light'>Your</span> <span class='text-primary'>Neighbor, <br class='d-block d-md-none' /></span>",
                   {
-                    delay: 350,
+                    delay: 375,
                   }
                 )
                 .type(
