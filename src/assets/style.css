@@ -142,7 +142,7 @@
 Hero section
 */
 #hero {
-  background: url("img/bg-hero-mobile.png") center center;
+  background: url("img/bg-hero-mobile2.png") center center;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -151,7 +151,7 @@ Hero section
 
 @media (min-width: 768px) {
   #hero {
-    background: url("img/hero-bg.jpg") center center;
+    background: url("img/hero-bg2.jpg") center center;
     min-height: 100vh;
     height: 100%;
   }
@@ -304,7 +304,7 @@ Hero section
 }
 
 .hero-bg {
-  background: url("img/bg-hero-mobile.png") center center;
+  background: url("img/bg-hero-mobile1.png") center center;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -313,7 +313,7 @@ Hero section
 
 @media (min-width: 768px) {
   .hero-bg {
-    background: url("img/hero-bg.jpg") center center;
+    background: url("img/hero-bg1.jpg") center center;
     height: 100%;
   }
 }
