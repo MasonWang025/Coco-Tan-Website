@@ -13,7 +13,6 @@
 
 .underline--magical {
   background-image: linear-gradient(120deg, #ff96ab 0%, #ff7893 100%);
-  background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
   transition: background-size 0.25s ease-in;
@@ -147,7 +146,6 @@ Hero section
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
@@ -155,7 +153,6 @@ Hero section
     background: url("img/hero-bg2.jpg") center center;
     min-height: 100vh;
     height: 100%;
-    background-repeat: no-repeat;
   }
 }
 
@@ -234,14 +231,12 @@ Hero section
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
   .hero-bg2 {
     background: url("img/hero-bg.jpg") center center;
     height: 100%;
-    background-repeat: no-repeat;
   }
 }
 
@@ -333,14 +328,12 @@ Hero section
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
   .hero-bg {
     background: url("img/hero-bg1.jpg") center center;
     height: 100%;
-    background-repeat: no-repeat;
   }
 }
 
