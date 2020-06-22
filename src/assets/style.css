@@ -279,6 +279,10 @@ Hero section
   padding-top: 95px;
 }
 
+.listing-container {
+  padding-bottom: 2em;
+}
+
 .listing-preview {
   object-fit: cover;
   height: 100%;
