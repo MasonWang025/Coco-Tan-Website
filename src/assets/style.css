@@ -2,6 +2,8 @@
 
 :root {
   --bright: rgb(235, 75, 75);
+  --darker: #ca3956;
+  --dark: #555555;
 }
 
 body,
@@ -16,12 +18,22 @@ html {
   margin-top: 0.25em;
 }
 
+.section-heading.smaller {
+  font-size: 2.1em;
+}
+
 .underline--magical {
   background-image: linear-gradient(120deg, #ff96ab 0%, #ff7893 100%);
+  background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
   transition: background-size 0.25s ease-in;
 }
+
+.section-heading.light .underline--magical {
+  background-image: linear-gradient(120deg, #ffd5dd 0%, #ffc2ce 100%);
+}
+
 .underline--magical:hover {
   background-size: 100% 88%;
 }
@@ -245,6 +257,7 @@ Hero section
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: fixed;
   width: 100%;
   min-height: 100vh;
   height: 100%;
@@ -257,12 +270,68 @@ Hero section
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: fixed;
     height: 100%;
   }
 }
 
 .listings-container {
   padding-top: 95px;
+}
+
+.listing-preview {
+  object-fit: cover;
+  height: 100%;
+  min-width: 100%;
+  max-height: 15em;
+}
+
+.listing-preview.desktop {
+  border-top-left-radius: 0.42em;
+  border-bottom-left-radius: 0.42em;
+}
+
+.listing-card {
+  border: 0;
+  border-radius: 0.42em;
+  background: -webkit-gradient(
+    linear,
+    center top,
+    right bottom,
+    from(#f6f6f6),
+    to(#d1d1d1)
+  );
+  transition: ease-out 0.2s;
+  box-shadow: -1px 1px 5px black;
+}
+
+.listing-card:hover {
+  transform: translateY(-0.2em);
+  box-shadow: -0.25em 0.25em 1em black;
+}
+
+.listing-card .price {
+  font-weight: bold;
+  color: var(--dark);
+  font-size: 1.42em;
+}
+
+.listing-card span.value,
+.listing-card span.firstvalue {
+  font-weight: bold;
+  color: var(--darker);
+  font-size: 1.2em;
+}
+
+.listing-card span.value::before {
+  content: " \09 | \09 ";
+  padding-left: 0.55em;
+  padding-right: 0.55em;
+  color: black;
+}
+
+.listing-card span.value::after {
+  content: " ";
 }
 
 /* Contact Section */

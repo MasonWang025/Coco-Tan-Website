@@ -11,8 +11,11 @@ export default function Listings(props) {
       return (
         <ListingCard
           key={doc.id}
+          id={doc.id}
           address={listing.address}
-          test={listing.test}
+          overview={listing.overview}
+          images={listing.images}
+          mls={listing.mls}
         />
       );
     });
