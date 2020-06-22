@@ -64,7 +64,7 @@ export default function ListingCard(props) {
             <div className="mb-3 mt-4 mt-3">
             <a
               href={props.mls}
-              className="btn-get-started main-action text-decoration-none"
+              className="btn-get-started main-action text-decoration-none listing-learn-more"
               target="_blank"
               rel="noopener noreferrer"
             >

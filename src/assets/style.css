@@ -19,7 +19,7 @@ html {
 }
 
 .section-heading.smaller {
-  font-size: 2.1em;
+  font-size: 1.8em;
 }
 
 .underline--magical {
@@ -313,14 +313,13 @@ Hero section
 .listing-card .price {
   font-weight: bold;
   color: var(--dark);
-  font-size: 1.42em;
+  font-size: 1.25em;
 }
 
 .listing-card span.value,
 .listing-card span.firstvalue {
   font-weight: bold;
   color: var(--darker);
-  font-size: 1.2em;
 }
 
 .listing-card span.value::before {
@@ -328,6 +327,10 @@ Hero section
   padding-left: 0.55em;
   padding-right: 0.55em;
   color: black;
+}
+
+.listing-learn-more {
+  font-size: 0.9em;
 }
 
 .listing-card span.value::after {
