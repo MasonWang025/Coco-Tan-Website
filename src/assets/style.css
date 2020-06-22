@@ -227,7 +227,7 @@ Hero section
 
 /* Listings Section */
 .hero-bg2 {
-  background: url("img/bg-hero-mobile1.png") center center;
+  background: url("img/bg-hero-mobile.png") center center;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -236,7 +236,7 @@ Hero section
 
 @media (min-width: 768px) {
   .hero-bg2 {
-    background: url("img/hero-bg1.jpg") center center;
+    background: url("img/hero-bg.jpg") center center;
     height: 100%;
   }
 }
