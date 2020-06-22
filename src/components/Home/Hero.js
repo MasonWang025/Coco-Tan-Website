@@ -15,7 +15,7 @@ export default function Hero() {
             options={{
               loop: false,
               lifeLike: false,
-              speed: 69,
+              speed: 55,
               html: true,
               cursor: false,
             }}

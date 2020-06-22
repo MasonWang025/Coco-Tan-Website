@@ -1,17 +1,26 @@
 import React from "react";
 
-export default function Listings() {
+import ListingCard from "../Listings/ListingCard";
+
+export default function Listings(props) {
+  var listingCards = [];
+  if (props.homes) {
+    console.log(props.homes);
+    listingCards = props.homes.map((doc) => {
+      let listing = doc.data();
+      return (
+        <ListingCard
+          key={doc.id}
+          address={listing.address}
+          test={listing.test}
+        />
+      );
+    });
+  }
+
   return (
-    <div className="container-fluid hero-bg2" id="listings">
-      <div className="embed-responsive embed-responsive-16by9">
-        <iframe
-          title="test"
-          className="embed-responsive-item"
-          loading="eager"
-          src="https://www.mlslistings.com/FindAnAgent/Profile/01376998"
-          allowfullscreen
-        ></iframe>
-      </div>
+    <div className="container-fluid hero-bg2 listings-container">
+      <div className="container">{listingCards}</div>
     </div>
   );
 }

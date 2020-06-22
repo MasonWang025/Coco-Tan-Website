@@ -226,25 +226,23 @@ Hero section
 }
 
 /* Listings Section */
-#listings {
-  margin-top: 70px;
-  max-height: calc(100vh - 70px);
-  border: 0;
-  padding: 0;
-}
-
 .hero-bg2 {
-  background: url("img/bg-hero-mobile.png") center center;
+  background: url("img/bg-hero-mobile1.png") center center;
   background-size: cover;
   width: 100%;
+  min-height: 100vh;
   height: 100%;
 }
 
-#listings iframe, #listings .embed-responsive {
-  height: calc(100vh - 70px);
-  width: 100%;
-  padding: 0;
-  margin: 0;
+@media (min-width: 768px) {
+  .hero-bg2 {
+    background: url("img/hero-bg1.jpg") center center;
+    height: 100%;
+  }
+}
+
+.listings-container {
+  padding-top: 95px;
 }
 
 /* Contact Section */

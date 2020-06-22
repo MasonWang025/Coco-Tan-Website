@@ -14,8 +14,20 @@ import About from "./components/About/About";
 import Listings from "./components/Listings/Listings";
 
 import "./assets/style.css";
+import { db } from "./data/firebase";
 
 export default function App() {
+  var [homes, updateHomes] = React.useState();
+
+  React.useEffect(() => {
+    db.collection("homes")
+    .get()
+    .then(querySnapshot => {
+      const data = querySnapshot.docs.map(doc => doc);
+      updateHomes(data);
+    });
+  }, []);
+
   return (
     <div>
       <Router>
@@ -25,7 +37,7 @@ export default function App() {
             <Home />
           </Route>
           <Route path="/listings">
-            <Listings />
+            <Listings homes={homes} />
           </Route>
           <Route path="/about">
             <About />
