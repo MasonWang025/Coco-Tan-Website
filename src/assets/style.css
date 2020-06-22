@@ -239,6 +239,7 @@ Hero section
 }
 
 .main-action {
+  font-weight: bold;
   text-transform: uppercase;
   background-color: var(--primary);
   border-color: var(--primary);
