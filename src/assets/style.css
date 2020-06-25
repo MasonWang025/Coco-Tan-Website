@@ -376,8 +376,8 @@ span.firstvalue::before {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
-  margin-right: 5px;
-  margin-bottom: -0.95px;
+  margin-right: 4px;
+  margin-bottom: -0.8px;
 }
 
 span.firstvalue.active::before {
@@ -390,6 +390,19 @@ span.firstvalue.pending::before {
 
 span.firstvalue.sold::before {
   background-color: rgb(231, 0, 0);
+}
+
+.dropdown-menu {
+  background: #f8f8f8;
+}
+
+.dropdown-menu > * {
+  transition: 0.35s ease-in-out;
+}
+
+.dropdown-menu > *:active,
+.dropdown-menu > *:hover {
+  background: #ebebeb;
 }
 
 span.value::before {
@@ -511,7 +524,7 @@ span.value::before {
   position: absolute;
   font-size: 3em;
   text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.42);
-  top: 3.69em;
+  top: calc(3em + 6vh);
   left: 1vw;
   right: 1vw;
   z-index: 100;
@@ -616,7 +629,7 @@ img + div.img-inset-shadow {
     font-size: 3.8em;
   }
   .listing-body {
-    margin-top: -7.5em;
+    margin-top: -7.9em;
   }
 }
 
@@ -632,6 +645,10 @@ img + div.img-inset-shadow {
   );
   -webkit-box-shadow: 0 0.75rem 1rem rgb(0, 0, 0) !important;
   box-shadow: 0 0.75rem 1rem rgb(0, 0, 0) !important;
+}
+
+.listing-body .card p {
+  font-size: 1.1em;
 }
 
 /* Contact Section */

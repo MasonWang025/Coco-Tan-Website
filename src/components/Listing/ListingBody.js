@@ -22,13 +22,14 @@ export default function ListingBody(props) {
                   "firstvalue " + props.home.overview.status.toLowerCase()
                 }
               >
-                {props.home.overview.status}
+                {" " + props.home.overview.status}
               </span>{" "}
               {" - "}
               <b className="text-primary">
                 {formatter.format(props.home.overview.price)}
               </b>
             </div>
+            <div className="d-block d-lg-none m-1"> </div>
             <div className="col-12 col-lg-8 text-lg-right">
               <div className="overview">
                 <span className="firstvalue text-primary">
@@ -61,7 +62,7 @@ export default function ListingBody(props) {
             </div>
           </div>
         </div>
-        <div className="card-body m-0 p-2">
+        <div className="card-body m-0 p-2 pb-3">
           <div className="about text-center">
             <SectionHeader light={true}>About</SectionHeader>
             <p>
@@ -77,7 +78,7 @@ export default function ListingBody(props) {
               href={props.home.links.mls}
               target="_blank"
               rel="noopener noreferrer"
-              className="no-uppercase mb-2 btn-get-started secondary-action text-decoration-none listing-learn-more"
+              className="no-uppercase mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
             >
               View on MLS
             </a>
@@ -85,7 +86,7 @@ export default function ListingBody(props) {
               href={props.home.links.zillow}
               target="_blank"
               rel="noopener noreferrer"
-              className="no-uppercase mx-2 mb-2 btn-get-started secondary-action text-decoration-none listing-learn-more"
+              className="no-uppercase mx-2 mb-2 mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
             >
               View on Zillow
             </a>
@@ -93,15 +94,21 @@ export default function ListingBody(props) {
               href={props.home.links.redfin}
               target="_blank"
               rel="noopener noreferrer"
-              className="no-uppercase mb-2 btn-get-started secondary-action text-decoration-none listing-learn-more"
+              className="no-uppercase mb-2 mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
             >
               View on Redfin
             </a>
-            <p>
+            {/* <p>
               <ReactMarkdown
                 source={props.home.details.about.replace("\n", "\n")}
                 renderers={{ paragraph: (props) => <div {...props} /> }}
               />
+            </p> */}
+            <p>
+              <i>
+                This page is currently being updated. Sorry for any
+                inconvenience. Please visit one of the links above.
+              </i>
             </p>
           </div>
         </div>

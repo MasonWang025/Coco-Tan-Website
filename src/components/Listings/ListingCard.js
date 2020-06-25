@@ -90,14 +90,47 @@ export default function ListingCard(props) {
                   </button>
                 </Link>
                 <div className="w-100 d-block d-sm-none"></div>
-                <a
-                  href={props.links.mls}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mb-md-0 mb-3 mx-0 mx-sm-2 btn-get-started secondary-action text-decoration-none listing-learn-more"
-                >
-                  View on MLS
-                </a>
+
+                <div className="dropup d-inline-block mb-md-0 mb-3 mx-0 mx-sm-2">
+                  <button
+                    className="btn dropdown-toggle btn-get-started secondary-action text-decoration-none listing-learn-more"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    View on{" "}
+                  </button>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a
+                      className="dropdown-item"
+                      href={props.links.mls}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View on MLS
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href={props.links.zillow}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View on Zillow
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href={props.links.redfin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View on Redfin
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
