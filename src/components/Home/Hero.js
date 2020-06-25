@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <div
-      className="container-fluid text-center text-md-left pt-0 pt-md-5 w-100"
+      className="container-fluid text-center text-md-left pt-0 pt-md-5 w-100 hero"
       id="hero"
     >
       <div className="container">

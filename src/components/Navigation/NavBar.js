@@ -22,7 +22,7 @@ export default function NavBar() {
   });
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
         {/* Logo */}
         <Link to="/">

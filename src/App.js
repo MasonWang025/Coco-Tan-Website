@@ -12,6 +12,7 @@ import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Listings from "./components/Listings/Listings";
+import Listing from "./components/Listing/Listing";
 
 import "./assets/style.css";
 import { db } from "./data/firebase";
@@ -21,23 +22,27 @@ export default function App() {
 
   React.useEffect(() => {
     db.collection("homes")
-    .get()
-    .then(querySnapshot => {
-      const data = querySnapshot.docs.map(doc => doc);
-      updateHomes(data);
-    });
+      .orderBy("order")
+      .get()
+      .then((querySnapshot) => {
+        const data = querySnapshot.docs.map((doc) => doc);
+        updateHomes(data);
+      });
   }, []);
 
   return (
-    <div>
+    <React.StrictMode>
       <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/listings">
+          <Route exact path="/listings">
             <Listings homes={homes} />
+          </Route>
+          <Route path="/listings">
+            <Listing homes={homes} />
           </Route>
           <Route path="/about">
             <About />
@@ -48,6 +53,6 @@ export default function App() {
           <Redirect to="/" />
         </Switch>
       </Router>
-    </div>
+    </React.StrictMode>
   );
 }

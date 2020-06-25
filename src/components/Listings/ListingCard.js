@@ -2,6 +2,8 @@ import React from "react";
 
 import SectionHeader from "../Other/SectionHeader";
 
+import { Link } from "react-router-dom";
+
 export default function ListingCard(props) {
   var formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -10,10 +12,18 @@ export default function ListingCard(props) {
     minimumFractionDigits: 0,
   });
   let title = props.address.split(",", 2).join();
-  console.log(props.overview);
+  
   return (
     <div className="mb-3">
-      <div className="listing-card" data-id={props.id}>
+      <div
+        className={"listing-card " + (props.featured && "featured")}
+        data-id={props.id}
+      >
+        {props.featured && (
+          <div class="ribbon">
+            <span>FEATURED</span>
+          </div>
+        )}
         <div className="row no-gutters align-items-center">
           {props.images.preview && (
             <div className="col-xl-4 col-3 d-none d-md-block">
@@ -32,12 +42,24 @@ export default function ListingCard(props) {
             />
             <div className="mx-3 ml-xl-4">
               <SectionHeader smaller={true} light={true}>
-                {title}
+                <Link
+                  to={"/listings/" + props.id}
+                  className="text-decoration-none text-dark"
+                >
+                  {title}
+                </Link>
               </SectionHeader>
 
               <p className="price">{formatter.format(props.overview.price)}</p>
               <p className="overview">
-                <span className="firstvalue">{props.overview.beds}</span> Bd
+                <span
+                  className={
+                    "firstvalue " + props.overview.status.toLowerCase()
+                  }
+                >
+                  {props.overview.status}
+                </span>
+                <span className="value">{props.overview.beds}</span> Bd
                 <span className="value">
                   {props.overview.baths[0]}
                   {props.overview.baths[1] && "/" + props.overview.baths[1]}
@@ -61,14 +83,20 @@ export default function ListingCard(props) {
                 Year Built
               </p>
 
-              <div className="mb-3 mt-4 mt-3">
+              <div className="mt-4">
+                <Link to={"/listings/" + props.id}>
+                  <button className="mb-md-0 mb-2 btn-get-started main-action text-decoration-none listing-learn-more">
+                    Learn more
+                  </button>
+                </Link>
+                <div className="w-100 d-block d-sm-none"></div>
                 <a
                   href={props.mls}
-                  className="btn-get-started main-action text-decoration-none listing-learn-more"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="mb-md-0 mb-3 mx-0 mx-sm-2 btn-get-started secondary-action text-decoration-none listing-learn-more"
                 >
-                  Learn more
+                  View on MLS
                 </a>
               </div>
             </div>

@@ -16,6 +16,7 @@ export default function Listings(props) {
           overview={listing.overview}
           images={listing.images}
           mls={listing.mls}
+          featured={listing.order === 0}
         />
       );
     });
@@ -23,7 +24,37 @@ export default function Listings(props) {
 
   return (
     <div className="container-fluid hero-bg2 listings-container">
-      <div className="container">{listingCards}</div>
+      <div className="container mb-4">
+        {listingCards}
+        <div className="listing-card dark" data-id={props.id}>
+          <div className="row no-gutters align-items-center text-center">
+            <div className="col">
+              <div className="mb-2 mt-3 px-5">
+                <p className="lead">
+                  To see recent transactions and past listings, please visit
+                  Coco's MLS page (or Zillow page).
+                </p>
+                <a
+                  href="https://www.mlslistings.com/FindAnAgent/Profile/01376998"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="no-uppercase mx-2 mb-2 btn-get-started text-white main-action text-decoration-none listing-learn-more"
+                >
+                  Coco's MLS Page
+                </a>
+                <a
+                  href="https://www.zillow.com/profile/cocorealestateteam/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="no-uppercase mb-2 btn-get-started text-white main-action text-decoration-none listing-learn-more"
+                >
+                  Coco's Zillow Page
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
