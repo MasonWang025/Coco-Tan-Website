@@ -208,7 +208,7 @@ Hero section
 }
 
 #hero #slogan {
-  text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.55);
+  text-shadow: -1px 2px 4px black;
   font-size: 2.7em;
   font-weight: bolder;
   font-style: italic;
@@ -236,6 +236,7 @@ Hero section
   border: 2px solid var(--white);
   color: var(--white);
   box-shadow: -1px 2px 5px var(--title);
+  background-color: transparent;
 }
 
 .btn-get-started:hover {
@@ -357,17 +358,17 @@ Hero section
   font-size: 1.25em;
 }
 
-.listing-card span.value {
+span.value {
   font-weight: bold;
   color: var(--darker);
 }
 
-.listing-card span.firstvalue {
+span.firstvalue {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.listing-card span.firstvalue::before {
+span.firstvalue::before {
   content: "";
   display: inline-block;
   width: 15px;
@@ -375,23 +376,23 @@ Hero section
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
-  margin-right: 4.2px;
+  margin-right: 5px;
   margin-bottom: -0.95px;
 }
 
-.listing-card span.firstvalue.active::before {
+span.firstvalue.active::before {
   background-color: rgb(0, 177, 0);
 }
 
-.listing-card span.firstvalue.pending::before {
+span.firstvalue.pending::before {
   background-color: rgb(231, 85, 0);
 }
 
-.listing-card span.firstvalue.sold::before {
+span.firstvalue.sold::before {
   background-color: rgb(231, 0, 0);
 }
 
-.listing-card span.value::before {
+span.value::before {
   content: " \09 | \09 ";
   padding-left: 0.55em;
   padding-right: 0.55em;
@@ -510,7 +511,7 @@ Hero section
   position: absolute;
   font-size: 3em;
   text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.42);
-  top: 3.9em;
+  top: 3.69em;
   left: 1vw;
   right: 1vw;
   z-index: 100;
@@ -524,7 +525,14 @@ img + div.img-inset-shadow {
   height: 74vh;
 }
 
-.listing-bg, .img-inset-shadow {
+.listing-back {
+  position: absolute;
+  z-index: 120;
+  top: 90px;
+}
+
+.listing-bg,
+.img-inset-shadow {
   user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -568,36 +576,36 @@ img + div.img-inset-shadow {
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 .listing-body {
-  margin-top: -5.69em;
+  margin-top: -9em;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .listing-hero-title {
-    top: 4.25em;
+    top: 4em;
   }
   .listing-body {
-    margin-top: -5.5em;
+    margin-top: -6em;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .listing-hero-title {
-    top: 4.4em;
+    top: 4.9em;
   }
   .listing-body {
-    margin-top: -5em;
+    margin-top: -6em;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .listing-hero-title {
-    top: 4.4em;
+    top: 4.3em;
   }
   .listing-body {
-    margin-top: -6.69em;
+    margin-top: -7.5em;
   }
 }
 
@@ -608,7 +616,7 @@ img + div.img-inset-shadow {
     font-size: 3.8em;
   }
   .listing-body {
-    margin-top: -6.9em;
+    margin-top: -7.5em;
   }
 }
 

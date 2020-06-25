@@ -1,13 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 export default function ListingHero(props) {
   let title = props.home.address.split(",", 2).join();
 
   return (
     <div>
       <div className="container">
+        <Link to="/listings" className="listing-back btn-get-started p-2 text-decoration-none">
+          Back to all{" "}
+        </Link>
+      </div>
+      <div className="container">
         <div className="row text-center">
           <div className="col">
-            <h1 className="text-white listing-hero-title" data-aos="fade-in">{title}</h1>
+            <h1 className="text-white listing-hero-title" data-aos="fade-in">
+              {title}
+            </h1>
           </div>
         </div>
       </div>
