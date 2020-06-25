@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import { useLocation } from "react-router-dom";
 
@@ -24,5 +24,5 @@ export default function Listing(props) {
         <ListingBody home={home} />
       </div>
     );
-  else return <div class="h-100 listing-page"></div>;
+  else return <div className="h-100 listing-page"></div>;
 }

@@ -7,7 +7,7 @@ export default function About() {
     <div className="mt-5 pt-5 text-center">
       This page is currently being updated. We apologize for any inconveniences.
       <div className="col-md-10 mx-auto mb-3 mt-4 text-center mt-3">
-        <Link className="btn-get-started main-action text-decoration-none">
+        <Link to="/contact" className="btn-get-started main-action text-decoration-none">
           Contact Coco
         </Link>
       </div>

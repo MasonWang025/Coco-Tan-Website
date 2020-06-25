@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function ListingHero(props) {
   let title = props.home.address.split(",", 2).join();
 
@@ -8,7 +7,7 @@ export default function ListingHero(props) {
       <div className="container">
         <div className="row text-center">
           <div className="col">
-            <h1 className="text-white listing-hero-title">{title}</h1>
+            <h1 className="text-white listing-hero-title" data-aos="fade-in">{title}</h1>
           </div>
         </div>
       </div>

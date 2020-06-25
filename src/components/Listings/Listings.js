@@ -8,6 +8,7 @@ export default function Listings(props) {
     console.log(props.homes);
     listingCards = props.homes.map((doc) => {
       let listing = doc.data();
+      console.log(listing);
       return (
         <ListingCard
           key={doc.id}
@@ -15,7 +16,7 @@ export default function Listings(props) {
           address={listing.address}
           overview={listing.overview}
           images={listing.images}
-          mls={listing.mls}
+          links={listing.links}
           featured={listing.order === 0}
         />
       );
@@ -29,7 +30,7 @@ export default function Listings(props) {
         <div className="listing-card dark" data-id={props.id}>
           <div className="row no-gutters align-items-center text-center">
             <div className="col">
-              <div className="mb-2 mt-3 px-5">
+              <div className="mb-3 mt-3 px-5">
                 <p className="lead">
                   To see recent transactions and past listings, please visit
                   Coco's MLS page (or Zillow page).

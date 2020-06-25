@@ -7,6 +7,13 @@
   --dark: #555555;
 }
 
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+
 body,
 html {
   width: 100vw;
@@ -493,6 +500,7 @@ Hero section
 }
 
 /* SINGLE LISTING PAGE */
+
 .listing-page {
   background-color: #222;
   min-height: 100vh;
@@ -501,31 +509,27 @@ Hero section
 .listing-hero-title {
   position: absolute;
   font-size: 3em;
-  text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.42);
+  text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.42);
   top: 3.9em;
-  left: 6.9vw;
-  right: 6.9vw;
+  left: 1vw;
+  right: 1vw;
   z-index: 100;
   text-align: center;
-}
-
-.listing-hero-title:after {
-  content: " ";
-  display: block;
-  border: 1px solid white;
-  border-radius: 4px;
-  height: 0.15em;
-
-  max-width: 2.5em;
-  margin: auto;
-  margin-top: 0.3em;
-  margin-bottom: 0.4em;
+  max-width: 99vw;
 }
 
 .listing-hero .listing-bg,
 img + div.img-inset-shadow {
   width: 100vw;
   height: 74vh;
+}
+
+.listing-bg, .img-inset-shadow {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .listing-bg,
@@ -600,20 +604,22 @@ img + div.img-inset-shadow {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .listing-hero-title {
-    top: 4.5em;
+    top: 3.5em;
+    font-size: 3.8em;
   }
   .listing-body {
-    margin-top: -5.69em;
+    margin-top: -6.9em;
   }
 }
 
 .listing-body .card {
   border: 0;
+  border-radius: 0.2em;
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(#eeeeee),
+    from(#f7f7f7),
     to(#d4d4d4)
   );
   -webkit-box-shadow: 0 0.75rem 1rem rgb(0, 0, 0) !important;

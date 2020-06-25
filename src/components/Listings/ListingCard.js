@@ -12,7 +12,7 @@ export default function ListingCard(props) {
     minimumFractionDigits: 0,
   });
   let title = props.address.split(",", 2).join();
-  
+
   return (
     <div className="mb-3">
       <div
@@ -20,7 +20,7 @@ export default function ListingCard(props) {
         data-id={props.id}
       >
         {props.featured && (
-          <div class="ribbon">
+          <div className="ribbon">
             <span>FEATURED</span>
           </div>
         )}
@@ -91,7 +91,7 @@ export default function ListingCard(props) {
                 </Link>
                 <div className="w-100 d-block d-sm-none"></div>
                 <a
-                  href={props.mls}
+                  href={props.links.mls}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mb-md-0 mb-3 mx-0 mx-sm-2 btn-get-started secondary-action text-decoration-none listing-learn-more"
