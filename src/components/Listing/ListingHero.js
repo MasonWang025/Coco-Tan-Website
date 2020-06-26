@@ -11,15 +11,6 @@ export default function ListingHero(props) {
           Back to all{" "}
         </Link>
       </div>
-      <div className="container">
-        <div className="row text-center">
-          <div className="col">
-            <h1 className="text-white listing-hero-title" data-aos="fade-in">
-              {title}
-            </h1>
-          </div>
-        </div>
-      </div>
       <div className="row no-gutters listing-hero">
         <div className="col-12 p-0">
           <div className="listing-bg">
@@ -28,6 +19,9 @@ export default function ListingHero(props) {
               alt="listings"
               className="img-fluid listing"
             />
+            <h1 className="text-white listing-hero-title" data-aos="fade-in">
+              {title}
+            </h1>
             <div className="img-inset-shadow"></div>
           </div>
         </div>

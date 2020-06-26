@@ -520,18 +520,6 @@ span.value::before {
   min-height: 100vh;
 }
 
-.listing-hero-title {
-  position: absolute;
-  font-size: 3em;
-  text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.42);
-  top: calc(3em + 6vh);
-  left: 1vw;
-  right: 1vw;
-  z-index: 100;
-  text-align: center;
-  max-width: 99vw;
-}
-
 .listing-hero .listing-bg,
 img + div.img-inset-shadow {
   width: 100vw;
@@ -584,56 +572,30 @@ img + div.img-inset-shadow {
   box-shadow: inset 0 -0.75em 0.75em -1em rgba(0, 0, 0, 0.724);
 }
 
-/* SINGLE LISTING body */
-
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
-.listing-body {
-  margin-top: -9em;
+.listing-hero img {
+  position: relative;
+  z-index: 10;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .listing-hero-title {
-    top: 4em;
-  }
-  .listing-body {
-    margin-top: -6em;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .listing-hero-title {
-    top: 4.9em;
-  }
-  .listing-body {
-    margin-top: -6em;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .listing-hero-title {
-    top: 4.3em;
-  }
-  .listing-body {
-    margin-top: -7.5em;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .listing-hero-title {
-    top: 3.5em;
-    font-size: 3.8em;
-  }
-  .listing-body {
-    margin-top: -7.9em;
-  }
+.listing-hero-title {
+  position: absolute;
+  font-size: 2.5em;
+  text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.42);
+  top: calc(2em + 22.4vh);
+  left: 5vw;
+  right: 5vw;
+  z-index: 100;
+  text-align: center;
+  max-width: 90vw;
 }
 
 .listing-body .card {
+  margin-top: -3.5em;
   border: 0;
   border-radius: 0.2em;
   background: -webkit-gradient(
@@ -643,12 +605,56 @@ img + div.img-inset-shadow {
     from(#f7f7f7),
     to(#d4d4d4)
   );
-  -webkit-box-shadow: 0 0.75rem 1rem rgb(0, 0, 0) !important;
-  box-shadow: 0 0.75rem 1rem rgb(0, 0, 0) !important;
+  -webkit-box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.8) !important;
+  box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.8) !important;
+  z-index: 10;
 }
 
 .listing-body .card p {
   font-size: 1.1em;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .listing-body .card {
+    margin-top: -4em;
+  }
+
+  .listing-hero-title {
+    font-size: 3em;
+    top: calc(1.5em + 22vh);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .listing-body .card {
+    margin-top: -4em;
+  }
+
+  .listing-hero-title {
+    font-size: 3em;
+    top: calc(1.5em + 22vh);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .listing-body .card {
+    margin-top: -7em;
+  }
+
+  .listing-hero-title {
+    font-size: 3.8em;
+    top: calc(0.5em + 24vh);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
 
 /* Contact Section */
