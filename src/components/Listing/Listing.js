@@ -15,7 +15,6 @@ export default function Listing(props) {
       return null;
     });
   }
-  console.log(home);
 
   if (home)
     return (

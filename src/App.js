@@ -13,6 +13,7 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Listings from "./components/Listings/Listings";
 import Listing from "./components/Listing/Listing";
+import ScrollToTop from "./components/Other/ScrollToTop";
 
 import "./assets/style.css";
 import { db } from "./data/firebase";
@@ -33,6 +34,7 @@ export default function App() {
   return (
     <React.StrictMode>
       <Router>
+        <ScrollToTop />
         <NavBar />
         <Switch>
           <Route exact path="/">

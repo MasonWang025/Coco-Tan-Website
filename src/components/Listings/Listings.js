@@ -5,10 +5,8 @@ import ListingCard from "../Listings/ListingCard";
 export default function Listings(props) {
   var listingCards = [];
   if (props.homes) {
-    console.log(props.homes);
     listingCards = props.homes.map((doc) => {
       let listing = doc.data();
-      console.log(listing);
       return (
         <ListingCard
           key={doc.id}
