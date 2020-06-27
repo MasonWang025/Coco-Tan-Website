@@ -149,7 +149,7 @@ export default function ListingBody(props) {
                   {props.home.youtubelinks.featurevideo && (
                     <section>
                       <h3 className="mt-3">Feature Video</h3>
-                      <a
+                      {props.home.youtubelinks.featurevideo[1] &&<a
                         href={props.home.youtubelinks.featurevideo[1]}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -157,16 +157,16 @@ export default function ListingBody(props) {
                       >
                         English Version{" "}
                         <i className="fa fa-external-link-square"></i>
-                      </a>
-                      <a
-                        href={props.home.youtubelinks.featurevideo[1]}
+                      </a>}
+                      {props.home.youtubelinks.featurevideo[0] && <a
+                        href={props.home.youtubelinks.featurevideo[0]}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="no-uppercase mb-2 mx-2 mb-2 btn-get-started main-action text-decoration-none listing-learn-more"
                       >
                         Chinese Version{" "}
                         <i className="fa fa-external-link-square"></i>
-                      </a>
+                      </a>}
                     </section>
                   )}
                 </div>
