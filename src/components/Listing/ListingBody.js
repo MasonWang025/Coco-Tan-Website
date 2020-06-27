@@ -12,6 +12,8 @@ export default function ListingBody(props) {
     minimumFractionDigits: 0,
   });
 
+  console.log(props.home);
+
   return (
     <div className="container listing-body pb-4">
       <div className="card">
@@ -151,7 +153,7 @@ export default function ListingBody(props) {
                         href={props.home.youtubelinks.featurevideo[1]}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="no-uppercase mb-2 mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
+                        className="no-uppercase mb-2 mx-2 mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
                       >
                         Chinese Version{" "}
                         <i className="fa fa-external-link-square"></i>
