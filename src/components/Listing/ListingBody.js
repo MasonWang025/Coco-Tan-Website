@@ -107,7 +107,16 @@ export default function ListingBody(props) {
                 renderers={{ paragraph: (props) => <div {...props} /> }}
               />
             </p> */}
-
+            {!(props.home.youtubelinks || props.home.zillow3dhome) && (
+              <p className="mt-3 mb-0 px-1 px-sm-2 px-md-5 mx-md-5">
+                <i>
+                  <b>We are currently updating information for this website.</b>{" "}
+                  You can learn about the property using any of the links above.
+                  Please contact Coco for any questions or for scheduling an
+                  appointment below.
+                </i>
+              </p>
+            )}
             <div className="listing-video">
               {props.home.youtubelinks && (
                 <div>
