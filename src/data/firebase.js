@@ -8,7 +8,7 @@ const firebaseApp = firebase.initializeApp({
   storageBucket: "coco-tan-website.appspot.com",
   messagingSenderId: "363665037551",
   appId: "1:363665037551:web:ff60b2c45073580f2de31a",
-  measurementId: "G-DL8HQS0FM5"
+  measurementId: "G-DL8HQS0FM5",
 });
 
 const db = firebaseApp.firestore();

@@ -25,6 +25,7 @@ html {
   font-weight: bold;
   font-size: 2.5em;
   margin-top: 0.25em;
+  cursor: default;
 }
 
 .section-heading.smaller {
@@ -616,11 +617,19 @@ img + div.img-inset-shadow {
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
+.listing-body .card {
+  margin-top: -18vh;
+}
+
+.listing-hero-title {
+  font-size: 2.5em;
+  top: calc(1.2em + 22vh);
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .listing-body .card {
-    margin-top: -4em;
+    margin-top: -17vh;
   }
 
   .listing-hero-title {
@@ -632,29 +641,33 @@ img + div.img-inset-shadow {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .listing-body .card {
-    margin-top: -4em;
+    margin-top: -18vh;
   }
 
   .listing-hero-title {
     font-size: 3em;
-    top: calc(1.5em + 22vh);
+    top: calc(1.2em + 24vh);
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .listing-body .card {
-    margin-top: -7em;
+    margin-top: calc(-6em - 3.8vh);
   }
 
   .listing-hero-title {
     font-size: 3.8em;
-    top: calc(0.5em + 24vh);
+    top: calc(0.7em + 24vh);
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .listing-hero-title {
+    font-size: 3.8em;
+    top: calc(0.7em + 25.5vh);
+  }
 }
 
 /* Contact Section */

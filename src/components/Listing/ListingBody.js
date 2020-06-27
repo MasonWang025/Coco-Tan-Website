@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import ReactMarkdown from "react-markdown";
 
 import SectionHeader from "../Other/SectionHeader";
@@ -64,7 +65,7 @@ export default function ListingBody(props) {
         </div>
         <div className="card-body m-0 p-2 pb-3">
           <div className="about text-center">
-            <SectionHeader light={true}>About</SectionHeader>
+            <SectionHeader>About</SectionHeader>
             <p>
               <b>
                 This page mostly contains exclusive information not found on
@@ -104,12 +105,112 @@ export default function ListingBody(props) {
                 renderers={{ paragraph: (props) => <div {...props} /> }}
               />
             </p> */}
-            <p>
-              <i>
-                This page is currently being updated. Sorry for any
-                inconvenience. Please visit one of the links above.
-              </i>
-            </p>
+
+            <div className="listing-video">
+              {props.home.youtubelinks && (
+                <div>
+                  <SectionHeader>Videos</SectionHeader>
+                  {props.home.youtubelinks.cinematicvideo && (
+                    <section>
+                      <a
+                        href={props.home.youtubelinks.cinematicvideo[0]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-decoration-none d-block mb-1 py-1 px-3"
+                      >
+                        (Property Video{" "}
+                        <i className="fa fa-external-link-square"></i>)
+                      </a>
+                      <div className="row justify-content-center px-2">
+                        <div className="col col-md-10 col-lg-9 col-xl-8">
+                          <div className="embed-responsive embed-responsive-16by9">
+                            <iframe
+                              title="3dtour"
+                              className="embed-responsive-item"
+                              src={props.home.youtubelinks.cinematicvideo[1]}
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  )}
+                  {props.home.youtubelinks.featurevideo && (
+                    <section>
+                      <h3 className="mt-3">Feature Video</h3>
+                      <a
+                        href={props.home.youtubelinks.featurevideo[1]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="no-uppercase mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
+                      >
+                        English Version{" "}
+                        <i className="fa fa-external-link-square"></i>
+                      </a>
+                      <a
+                        href={props.home.youtubelinks.featurevideo[1]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="no-uppercase mb-2 mb-2 py-1 px-3 btn-get-started secondary-action text-decoration-none listing-learn-more"
+                      >
+                        Chinese Version{" "}
+                        <i className="fa fa-external-link-square"></i>
+                      </a>
+                    </section>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <div className="listing-3dtour">
+              {props.home.zillow3dhome && (
+                <div>
+                  <SectionHeader>3D Tour</SectionHeader>
+                  <a
+                    href={props.home.zillow3dhome}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none d-block mb-1 py-1 px-3"
+                  >
+                    (Zillow 3D Tour{" "}
+                    <i className="fa fa-external-link-square"></i>)
+                  </a>
+                  <div className="row justify-content-center px-2">
+                    <div className="col col-md-10 col-lg-9 col-xl-8">
+                      <div className="embed-responsive embed-responsive-16by9">
+                        <iframe
+                          title="3dtour"
+                          className="embed-responsive-item"
+                          src={props.home.zillow3dhome}
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="listing-contact px-1 px-sm-2 px-md-5 mx-md-5 mb-1">
+              <SectionHeader>Contact Coco</SectionHeader>
+              Schedule an appointment or learn more about this property by
+              emailing Coco at{" "}
+              <a
+                href="mailto:CocoTanGroup@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <b>CocoTanGroup@gmail.com</b>
+              </a>
+              . We're happy to answer any questions you have!
+              <br />
+              <Link to="/contact">
+                <button className="mb-md-0 mb-4 mt-2 btn-get-started main-action text-decoration-none listing-learn-more">
+                  Contact Coco
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
