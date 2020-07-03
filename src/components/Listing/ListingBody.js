@@ -123,6 +123,7 @@ export default function ListingBody(props) {
                   <SectionHeader>Videos</SectionHeader>
                   {props.home.youtubelinks.cinematicvideo && (
                     <section>
+                      <h3 className="mt-2">Property Video</h3>
                       <a
                         href={props.home.youtubelinks.cinematicvideo[0]}
                         target="_blank"
