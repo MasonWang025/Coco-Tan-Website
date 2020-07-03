@@ -687,6 +687,17 @@ img + div.img-inset-shadow {
   height: 100%;
 }
 
+.about-container img {
+  transition: ease-out 0.3s;
+  box-shadow: -1px 1px 1em rgba(0, 0, 0, 0.3);
+}
+
+.about-container img:hover {
+  border: 0;
+  transform: translateY(-0.2em);
+  box-shadow: -0.25em 0.25em 1em rgba(0, 0, 0, 0.42);
+}
+
 @media (min-width: 768px) {
   .about-bg {
     background: url("img/hero-bg3.jpg") center center;

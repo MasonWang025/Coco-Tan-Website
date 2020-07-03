@@ -6,7 +6,7 @@ import SectionHeader from "../Other/SectionHeader";
 
 export default function About() {
   return (
-    <div className="container-fluid about-container about-bg pb-3">
+    <div className="container-fluid about-container about-bg pb-4">
       <div className="container about-wrap shadow card card-body border-0">
         <div className="row text-lg-left text-center">
           <div className="col-xl-8 col-12">
@@ -74,7 +74,6 @@ export default function About() {
               </div>
               <div className="col-12">
                 <h4>Luxury Real Estate and Brand Name</h4>
-
                 <p>
                   Very experienced and well known realtor who has sold many
                   luxury homes.
@@ -102,6 +101,23 @@ export default function About() {
                 </p>
               </div>
             </div>
+
+            <div className="row d-block d-md-none justify-content-center text-center">
+              <div className="col-8 mx-auto mb-4">
+                <a
+                  href={require("../../assets/Coco's Resume.pdf")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    alt="Coco Tan"
+                    className="img-fluid rounded mt-4"
+                    src={require("../../assets/img/Coco's Resume Cover.jpg")}
+                    title="View Coco's Resume"
+                  />
+                </a>
+              </div>
+            </div>
             <div className="row">
               <div className="col-12 mb-1">
                 <a
@@ -116,7 +132,7 @@ export default function About() {
                 <br className="d-block d-md-none" />
                 <Link
                   to="/contact"
-                  className="btn-get-started secondary-action no-uppercase text-decoration-none mx-2"
+                  className="btn-get-started secondary-action no-uppercase text-decoration-none mx-2 mb-2 mb-md-none"
                 >
                   Contact Coco
                 </Link>
@@ -131,7 +147,7 @@ export default function About() {
             >
               <img
                 alt="Coco Tan"
-                className="img-fluid rounded shadow mt-4"
+                className="img-fluid rounded mt-4"
                 src={require("../../assets/img/Coco's Resume Cover.jpg")}
                 title="View Coco's Resume"
               />
