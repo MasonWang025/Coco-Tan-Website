@@ -170,7 +170,7 @@ html {
 Hero section
 */
 #hero {
-  background: url("img/bg-hero-mobile2.png") no-repeat center center fixed;
+  background: #555 url("img/bg-hero-mobile2.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -183,7 +183,7 @@ Hero section
 
 @media (min-width: 768px) {
   #hero {
-    background: url("img/hero-bg2.jpg") center center;
+    background: #555 url("img/hero-bg2.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -282,7 +282,7 @@ Hero section
 
 /* Listings Section */
 .hero-bg2 {
-  background: url("img/bg-hero-mobile.png") center center;
+  background: #555 url("img/bg-hero-mobile.png") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -296,7 +296,7 @@ Hero section
 
 @media (min-width: 768px) {
   .hero-bg2 {
-    background: url("img/hero-bg.jpg") center center;
+    background: #555 url("img/hero-bg.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -619,6 +619,7 @@ img + div.img-inset-shadow {
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
+
 /* No media query for `xs` since this is the default in Bootstrap */
 .listing-body .card {
   margin-top: -18vh;
@@ -648,7 +649,7 @@ img + div.img-inset-shadow {
   }
 
   .listing-hero-title {
-    font-size: 3em;
+    font-size: 2.8em;
     top: calc(1.2em + 24vh);
   }
 }
@@ -673,13 +674,36 @@ img + div.img-inset-shadow {
   }
 }
 
+/* shortass devices */
+@media (max-height: 700px) {
+  .listing-body .card {
+    margin-top: -17vh;
+  }
+
+  .listing-hero-title {
+    font-size: 2.3em;
+    top: calc(1.5em + 22vh);
+  }
+}
+
+@media (max-height: 500px) {
+  .listing-body .card {
+    margin-top: -17vh;
+  }
+
+  .listing-hero-title {
+    font-size: 2em;
+    top: calc(1.5em + 22vh);
+  }
+}
+
 /* About Section */
 .about-container {
   padding-top: 95px;
 }
 
 .about-bg {
-  background: url("img/bg-hero-mobile3.png") center center;
+  background: #555 url("img/bg-hero-mobile3.png") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -702,7 +726,7 @@ img + div.img-inset-shadow {
 
 @media (min-width: 768px) {
   .about-bg {
-    background: url("img/hero-bg3.jpg") center center;
+    background: #555 url("img/hero-bg3.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -806,7 +830,8 @@ img + div.img-inset-shadow {
 }
 
 .hero-bg {
-  background: url("img/bg-hero-mobile1.png") center center;
+  background-color: var(--dark);
+  background: #555 url("img/bg-hero-mobile1.png") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -818,7 +843,7 @@ img + div.img-inset-shadow {
 
 @media (min-width: 768px) {
   .hero-bg {
-    background: url("img/hero-bg1.jpg") center center;
+    background: #555 url("img/hero-bg1.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

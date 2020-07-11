@@ -12,8 +12,6 @@ export default function ListingBody(props) {
     minimumFractionDigits: 0,
   });
 
-  console.log(props.home);
-
   return (
     <div className="container listing-body pb-4">
       <div className="card">
@@ -150,24 +148,28 @@ export default function ListingBody(props) {
                   {props.home.youtubelinks.featurevideo && (
                     <section>
                       <h3 className="mt-3">Feature Video</h3>
-                      {props.home.youtubelinks.featurevideo[1] &&<a
-                        href={props.home.youtubelinks.featurevideo[1]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="no-uppercase mb-2 btn-get-started main-action text-decoration-none"
-                      >
-                        English Version{" "}
-                        <i className="fa fa-external-link-square"></i>
-                      </a>}
-                      {props.home.youtubelinks.featurevideo[0] && <a
-                        href={props.home.youtubelinks.featurevideo[0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="no-uppercase mb-2 mx-2 mb-2 btn-get-started main-action text-decoration-none"
-                      >
-                        Chinese Version{" "}
-                        <i className="fa fa-external-link-square"></i>
-                      </a>}
+                      {props.home.youtubelinks.featurevideo[1] && (
+                        <a
+                          href={props.home.youtubelinks.featurevideo[1]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="no-uppercase mb-2 btn-get-started main-action text-decoration-none"
+                        >
+                          English Version{" "}
+                          <i className="fa fa-external-link-square"></i>
+                        </a>
+                      )}
+                      {props.home.youtubelinks.featurevideo[0] && (
+                        <a
+                          href={props.home.youtubelinks.featurevideo[0]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="no-uppercase mb-2 mx-2 mb-2 btn-get-started main-action text-decoration-none"
+                        >
+                          Chinese Version{" "}
+                          <i className="fa fa-external-link-square"></i>
+                        </a>
+                      )}
                     </section>
                   )}
                 </div>
@@ -184,8 +186,7 @@ export default function ListingBody(props) {
                     rel="noopener noreferrer"
                     className="text-decoration-none d-block mb-1 py-1 px-3"
                   >
-                    (Zillow 3D Tour{" "}
-                    <i className="fa fa-external-link-square"></i>)
+                    (3D Tour <i className="fa fa-external-link-square"></i>)
                   </a>
                   <div className="row justify-content-center px-2">
                     <div className="col col-md-10 col-lg-9 col-xl-8">

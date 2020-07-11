@@ -83,7 +83,7 @@ export default function ListingCard(props) {
                 Year Built
               </p>
 
-              <div className="mt-4">
+              <div className="mt-2 mb-1">
                 <Link to={"/listings/" + props.id}>
                   <button className="mb-md-0 mb-2 btn-get-started main-action text-decoration-none listing-learn-more">
                     Learn more
