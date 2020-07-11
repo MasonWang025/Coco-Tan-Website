@@ -708,9 +708,11 @@ img + div.img-inset-shadow {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .about-container img {
@@ -731,7 +733,11 @@ img + div.img-inset-shadow {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
