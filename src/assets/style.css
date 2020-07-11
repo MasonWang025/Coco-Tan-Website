@@ -287,11 +287,11 @@ Hero section
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: fixed;
+  background-attachment: fixed;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -301,8 +301,10 @@ Hero section
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: fixed;
-    height: 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
