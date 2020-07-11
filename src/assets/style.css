@@ -723,6 +723,10 @@ img + div.img-inset-shadow {
   border-radius: 0.25em;
 }
 
+.about-wrap .primary a {
+  text-decoration: none;
+}
+
 /* Contact Section */
 /* contact form */
 .contact-container {
