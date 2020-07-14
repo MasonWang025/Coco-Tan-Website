@@ -1,4 +1,4 @@
-# Coco-Tan-Website
+# coco-tan-website
 
 <a href="https://www.realtorcocotan.com">Coco Tan's Website</a>, built with React and Firebase.
 
