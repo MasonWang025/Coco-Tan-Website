@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { Image } from "cloudinary-react";
 import SectionHeader from "../Other/SectionHeader";
 
 export default function About() {
@@ -109,11 +110,12 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img
-                    alt="Coco Tan"
+                  <Image
+                    cloudName="masonwang"
                     className="img-fluid rounded mt-4"
-                    src={require("../../assets/img/Coco's Resume Cover.jpg")}
+                    publicId="https://res.cloudinary.com/masonwang/image/upload/v1599875833/coco-tan-website/Cocos_Resume_Cover.jpg"
                     title="View Coco's Resume"
+                    alt="Coco Tan"
                   />
                 </a>
               </div>
@@ -145,11 +147,12 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                alt="Coco Tan"
+              <Image
+                cloudName="masonwang"
                 className="img-fluid rounded mt-4"
-                src={require("../../assets/img/Coco's Resume Cover.jpg")}
+                publicId="https://res.cloudinary.com/masonwang/image/upload/v1599875833/coco-tan-website/Cocos_Resume_Cover.jpg"
                 title="View Coco's Resume"
+                alt="Coco Tan"
               />
             </a>
           </div>

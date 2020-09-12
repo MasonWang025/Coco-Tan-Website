@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import $ from "jquery";
+import { Image } from "cloudinary-react";
 
 import NavBarItem from "./NavBarItem";
 import BlobButton from "../Other/BlobButton";
@@ -26,8 +27,9 @@ export default function NavBar() {
       <div className="container">
         {/* Logo */}
         <Link to="/">
-          <img
-            src={require("../../assets/img/logo.png")}
+          <Image
+            cloudName="masonwang"
+            publicId="https://res.cloudinary.com/masonwang/image/upload/v1599875833/coco-tan-website/logo.png"
             alt="Coco Tan logo"
             id="navlogoimg"
           />
